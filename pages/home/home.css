@@ -1,0 +1,68 @@
+﻿.homepage section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.meetingHolder {
+    oldwidth: calc(50% - 10px);
+    width: 450px;
+    oldheight: calc(100% - 20px);
+    height: 350px;
+    overflow-y: scroll;
+    background-color: darkslategray;
+    border: 5px inset black;
+    margin: 3px;
+}
+
+.meetingTitle {
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+
+.meetingDate {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 12px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+
+.meetingLocation {
+    padding: 5px 12px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+
+.meetingSpeakerName {
+    padding: 5px 12px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+                    
+.meetingSpeakerLink {
+    padding: 5px 12px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+
+.meetingNotes {
+    padding: 5px 12px;
+    border: 2px inset;
+    margin: 4px 20px 4px 1px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}

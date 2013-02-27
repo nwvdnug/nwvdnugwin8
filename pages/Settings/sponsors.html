@@ -1,0 +1,24 @@
+﻿<!doctype HTML>
+<html>
+    <head>
+        <title>Sponsors flyout</title>
+    </head>
+<body>
+    <div data-win-control="WinJS.UI.SettingsFlyout" aria-label="Group Sponsors" 
+        data-win-options="{settingsCommandId:'sponsors',width:'wide'}">
+            <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color -->
+            <div class="win-ui-dark win-header"> <!-- Background color reflects app's personality -->
+               <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+               <div class="win-label">Sponsors of the NWVDNUG</div>
+               <img src="../../images/logo.png" style="position: absolute; top: 5px; right: 40px;"/>
+            </div>
+            <div class="win-content ">
+                <div class="win-settings-section">
+                    <h3>Sponsors Page on the NWVDNUG.org Site</h3>
+                    <iframe src="http://nwvdnug.org/home/sponsors" width="566" height="600"/>
+                </div>
+            </div>
+        </div>
+        <!-- ENDSETTINGSFLYOUT -->
+</body>
+</html>
