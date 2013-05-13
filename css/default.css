@@ -1,7 +1,9 @@
 ﻿#contenthost {
     height: 100%;
     width: 100%;
-    background-color: gray;
+    background-color: rgb(147, 114, 62);
+    color: rgb(23, 63, 93);
+    /*border: 1px solid yellow;*/
 }
 
 .fragment {

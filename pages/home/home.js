@@ -10,9 +10,6 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            var app = WinJS.Application;
-
-            var list = new WinJS.Binding.List();
             // Call xhr for the URL to get results asynchronously
             var xhr = WinJS.xhr(
                 {
@@ -22,10 +19,22 @@
             xhr.done(function (response) {
                 var listData = JSON.parse(response.responseText);
                 // Retrieve the control template
-                listData.forEach(function(listItem) {
-                    // Bind the current person to the HTML elements in the section
-                    nwvdnugApp.MeetingList.push(listItem);
-                });
+                if (listData.length == 0) {
+                    var emptyDataListItem = {
+                        Title: 'No meetings returned from service.',
+                        MeetingStartTime: '',
+                        Location: '',
+                        SpeakerName: '',
+                        SpeakerBioLink: '',
+                        Notes: 'No meeting information was obtained from the server. Please check back later for new meeting information to be released.'
+                    };
+                    nwvdnugApp.MeetingList.push(emptyDataListItem);
+                } else {
+                    listData.forEach(function(listItem) {
+                        // Bind the current person to the HTML elements in the section
+                        nwvdnugApp.MeetingList.push(listItem);
+                    });
+                }
             }, function(err) {
                 //handle error cases
                 var msg = "undefined error";
@@ -48,4 +57,12 @@
             });
         }
     });
+
+    function handleResize(eventArgs) {
+        var isSnapped = (Windows.UI.ViewManagement.ApplicationView.value ===
+    Windows.UI.ViewManagement.ApplicationViewState.snapped);
+        meetingListDiv.layout = isSnapped ? new WinJS.UI.ListLayout() : new WinJS.UI.GridLayout();
+    }
+
+    window.addEventListener("resize", handleResize);
 })();
