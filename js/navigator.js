@@ -12,6 +12,7 @@
                 this._element.appendChild(this._createPageElement());
 
                 this.home = options.home;
+                this.details = options.details;
                 this._lastViewstate = appView.value;
 
                 nav.onnavigated = this._navigated.bind(this);
@@ -24,6 +25,7 @@
                 Application.navigator = this;
             }, {
                 home: "",
+                details: "",
                 /// <field domElement="true" />
                 _element: null,
                 _lastNavigationPromise: WinJS.Promise.as(),

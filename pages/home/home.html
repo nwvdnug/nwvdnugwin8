@@ -1,44 +1,45 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>homePage</title>
+	<head>
+		<meta charset="utf-8" />
+		<title>homePage</title>
 
-        <!-- WinJS references -->
-        <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
-        <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
-        <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+		<!-- WinJS references -->
+		<link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+		<script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+		<script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
-        <link href="/css/default.css" rel="stylesheet" />
-        <link href="/pages/home/home.css" rel="stylesheet" />
-        <script src="/pages/home/home.js"></script>
-    </head>
+		<link href="/css/default.css" rel="stylesheet" />
+		<link href="/pages/home/home.css" rel="stylesheet" />
+		<script src="/pages/home/home.js"></script>
+	</head>
 <body>
-    <!-- The content that will be loaded and displayed. -->
-    <div class="fragment homepage">
-        <header aria-label="Header content" role="banner">
-            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
-            <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">NWVDNUG Meetings Information</span>
-            </h1>
-        </header>
-        <section aria-label="Main content" role="main">
-            <div id="meetingTemplate" data-win-control="WinJS.Binding.Template">
-                <div class="meetingHolder">
-                    <div class="meetingTitle" data-win-bind="innerText: Title"></div>
-                    <div class="meetingDate" data-win-bind="innerText: MeetingStartTime"></div>
-                    <div class="meetingLocation" data-win-bind="innerText: Location"></div>
-                    <div class="meetingSpeakerName" data-win-bind="innerText: SpeakerName"></div>
-                    <div class="meetingSpeakerLink" data-win-bind="innerText: SpeakerBioLink"></div>
-                    <div class="meetingNotes" data-win-bind="innerText: Notes"></div>
-                </div>
-            </div>
-            <div id="meetingListDiv" data-win-control="WinJS.UI.ListView" 
-                 data-win-options="{itemDataSource: nwvdnugApp.MeetingList.dataSource, 
-                selectionMode: WinJS.UI.SelectionMode.none,
-                itemTemplate: select('#meetingTemplate'), layout: {type: WinJS.UI.GridLayout} }">
-            </div>
-        </section>
-    </div>
+	<!-- The content that will be loaded and displayed. -->
+	<div class="fragment homepage">
+		<header aria-label="Header content" role="banner">
+			<button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+			<h1 class="titlearea win-type-ellipsis">
+				<span class="pagetitle">NWVDNUG Meetings Information</span>
+			</h1>
+		</header>
+		<section aria-label="Main content" role="main">
+			<div id="meetingTemplate" data-win-control="WinJS.Binding.Template">
+				<div class="meetingHolder">
+					<div class="meetingTitle" data-win-bind="innerText: Title"></div>
+					<div class="meetingDate" data-win-bind="innerText: MeetingStartTime"></div>
+					<div class="meetingLocation" data-win-bind="innerText: Location"></div>
+					<div class="meetingSpeakerName" data-win-bind="innerText: SpeakerName"></div>
+					<div class="meetingSpeakerLink" data-win-bind="innerText: SpeakerBioLink"></div>
+					<div class="meetingNotes" data-win-bind="innerText: Notes"></div>
+				</div>
+			</div>
+			<div id="meetingListDiv" data-win-control="WinJS.UI.ListView" 
+			     data-win-options="{itemDataSource: nwvdnugApp.MeetingList.dataSource, 
+	selectionMode: WinJS.UI.SelectionMode.single,
+				oniteminvoked : homePage.invokeHandler,
+				itemTemplate: select('#meetingTemplate'), layout: {type: WinJS.UI.GridLayout} }">
+			</div>
+		</section>
+	</div>
 </body>
 </html>

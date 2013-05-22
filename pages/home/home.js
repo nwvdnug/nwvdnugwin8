@@ -1,11 +1,15 @@
 ﻿(function () {
 	"use strict";
 
+	var nav = WinJS.Navigation;
 	var meetingsList = new WinJS.Binding.List();
 	var publicMembers = { MeetingList: meetingsList };
 	WinJS.Namespace.define("nwvdnugApp", publicMembers);
 
 	WinJS.UI.Pages.define("/pages/home/home.html", {
+		selectionChanged: function (eventArgs) {
+				nav.navigate(Application.navigator.home);
+		},
 		// This function is called whenever a user navigates to this page. It
 		// populates the page elements with the app's data.
 		ready: function (element, options) {
@@ -69,4 +73,12 @@
 	}
 
 	window.addEventListener("resize", handleResize);
+	
+	WinJS.Namespace.define("homePage", { invokeHandler: invokehandler });
+	function invokehandler(eventArgs) {
+		nav.navigate(Application.navigator.details);
+	}
+
+	WinJS.UI.eventHandler(invokehandler);
+	
 })();

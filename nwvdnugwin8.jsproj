@@ -64,6 +64,9 @@
     <Content Include="js\navigator.js" />
     <None Include="Package.StoreAssociation.xml" />
     <None Include="nwvdnugwin8_StoreKey.pfx" />
+    <Content Include="pages\details\details.css" />
+    <Content Include="pages\details\details.html" />
+    <Content Include="pages\details\details.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
