@@ -15,6 +15,7 @@
 		ready: function (element, options) {
 			// TODO: Initialize the page here.
 			// Call xhr for the URL to get results asynchronously
+			nwvdnugApp.MeetingList.splice(0, nwvdnugApp.MeetingList.length);
 			var xhr = WinJS.xhr(
 				{
 					url: "http://www.nwvdnug.org/api/upcomingmeetings/"
@@ -22,6 +23,7 @@
 
 			xhr.done(function (response) {
 				var listData = JSON.parse(response.responseText);
+				
 				// Retrieve the control template
 				if (listData.length == 0) {
 					var emptyDataListItem = {
