@@ -15,10 +15,8 @@
 }
 
 .meetingDetailHolder {
-    oldwidth: calc(50% - 10px);
     width: calc(80% - 50px);
-    oldheight: calc(100% - 20px);
-    height: 370px;
+    height: calc(100% - 20px);
     overflow-y: scroll;
     background-color: rgb(147, 114, 62);
     border: 1px solid black;
