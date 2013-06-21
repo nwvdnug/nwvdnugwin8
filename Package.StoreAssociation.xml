@@ -347,5 +347,10 @@
     <MainPackageIdentityName>60252MikeScott8.DisneylandPictures</MainPackageIdentityName>
     <MainPackageIdentityName>60252MikeScott8.WDWPictures</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/481b16b1-3b20-45e9-a764-ce69a484c333" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/481b16b1-3b20-45e9-a764-ce69a484c333">
+    <PackageInfo>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.2</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>

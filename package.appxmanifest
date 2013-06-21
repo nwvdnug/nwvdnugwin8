@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="60252MikeScott8.NWVDNUGMeetingInfo" Version="1.0.0.2" Publisher="CN=37C99DFD-9409-4DCC-9263-E0B6FA2189E6" />
+  <Identity Name="60252MikeScott8.NWVDNUGMeetingInfo" Version="1.0.0.3" Publisher="CN=37C99DFD-9409-4DCC-9263-E0B6FA2189E6" />
   <Properties>
     <DisplayName>NWVDNUG Meeting Info</DisplayName>
     <PublisherDisplayName>MikeScott8</PublisherDisplayName>
